@@ -1,0 +1,382 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Paint Your Home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/stack-interface.css" rel="stylesheet" type="text/css" media="all">
+    <link href="css/socicon.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="css/stack-interface.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="css/theme-yeller.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="css/custom.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:200,300,400,400i,500,600,700" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+
+</head>
+<body data-smooth-scroll-offset="77">
+<div class="nav-container">
+    <div class="via-1540306670833" via="via-1540306670833" vio="nav-menu">
+        <div class="bar bar--sm visible-xs">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-3 col-sm-2">
+                        <a href="index.html"> <img class="logo logo-dark" alt="logo" src="img/logo.png"> <img class="logo logo-light" alt="logo" src="img/logo-light.png"> </a>
+                    </div>
+                    <div class="col-xs-9 col-sm-10 text-right">
+                        <a href="index.html" class="hamburger-toggle" data-toggle-class="#menu1;hidden-xs hidden-sm"> <i class="icon icon--sm stack-interface stack-menu"></i> </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <nav id="menu1" class="bar bar-1 hidden-xs">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-1 col-sm-2 hidden-xs">
+                        <div class="bar__module">
+                            <a href="index.html"> <img class="logo logo-dark" alt="logo" src="img/logo.png"></a>
+                        </div>
+                    </div>
+                    <div class="col-md-11 col-sm-12 text-right text-left-xs text-left-sm" style="margin-top: 10px">
+                        <div class="bar__module">
+                            <ul class="menu-horizontal text-left">
+                                <li> <a href="index.html">
+                                    HOME</a> </li>
+                                <li> <a href="#">
+                                    ABOUT</a> </li>
+                                <li> <a href="products.html">
+                                    PRODUCTS</a> </li>
+                                <li> <a href="#">
+                                    CONTACT</a> </li>
+                            </ul>
+                        </div>
+                        <div class="bar__module">
+                            <a class="btn btn--sm btn--primary type--uppercase" href="paint-a-home.html"> <span class="btn__text">
+                                    PAINT ME A HOME</span> </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+</div>
+<div class="main-container">
+    <section class="imagebg text-center" data-overlay="4">
+        <div class="background-image-holder"> <img alt="background" src="img/background-1.jpg"> </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <h1 id="banner-text">Paint Your
+                        <span>Home</span>
+                    </h1>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="switchable switchable--switch">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-sm-5 col-md-5">
+                    <ol class="process-3">
+                        <li class="process_item">
+                            <div class="process__number"><span>1</span></div>
+                            <div class="process__body">
+                                <h4>Pick An Area To Paint</h4>
+                                <form>
+                                    <select id="select-category"  onchange="getAreaSelected()">
+                                        <option value="" disabled selected>Choose: </option>
+                                        <option value="Living Room">Living Room</option>
+                                        <option value="Bedroom">Bedroom</option>
+                                        <option value="Bathroom">Bathroom</option>
+                                        <option value="Kitchen">Kitchen</option>
+                                        <option value="Office">Office</option>
+                                    </select>
+                                </form>
+                            </div>
+                        </li>
+                        <li class="process_item">
+                            <div class="process__number"><span>2</span></div>
+                            <div class="process__body">
+                                <h4>Choose Your Colors</h4>
+                                <form>
+                                    <select id="color-1" name="color-1" onchange="getColorOne()">
+                                        <option value="" disabled selected>COLOR 1:</option>
+                                        <option value="white">WHITE</option>
+                                        <option value="nude">NUDE</option>
+                                        <option value="grey">GREY</option>
+                                        <option value="black">BLACK</option>
+                                        <option value="red">RED</option>
+                                        <option value="yellow">YELLOW</option>
+                                        <option value="lavender">LAVENDER</option>
+                                        <option value="pink">PINK</option>
+                                    </select>
+                                    <label for="color-2"></label>
+                                    <select id="color-2" name="color-2" onchange="getColorTwo()">
+                                        <option value="" disabled selected>COLOR 2: </option>
+                                        <option value="white">WHITE</option>
+                                        <option value="nude">NUDE</option>
+                                        <option value="grey">GREY</option>
+                                        <option value="black">BLACK</option>
+                                        <option value="red">RED</option>
+                                        <option value="yellow">YELLOW</option>
+                                        <option value="lavender">LAVENDER</option>
+                                        <option value="pink">PINK</option>
+                                    </select>
+                                </form>
+                            </div>
+                        </li>
+                        <li class="process_item">
+                            <div class="process__number"><span>3</span></div>
+                            <div class="process__body">
+                                <h4>Paint It!</h4>
+                                <div class="bar__module">
+                                    <a class="btn btn--sm btn--primary type--uppercase" onclick="paintSelectedArea(getAreaSelected())">
+                                        <span class="btn__text">
+                                    GET DECOR  IDEAS</span> </a>
+                                </div>
+                            </div>
+                        </li>
+                    </ol>
+                </div>
+                <div class="col-md-1 col-sm-1" style="height: 70vh; border-right: 1px solid #ddd"></div>
+                <div class="col-sm-6 col-md-5 col-md-offset-1 text-center">
+                    <div class="row ">
+                        <h4 id="result-heading"> Our Colours</h4>
+                        <!--<h6 id="no-results-message"></h6>-->
+                        <div id="main-container">
+                            <h6 id="result-message"> No Results</h6>
+                            <div class="row" id="color-show" style="margin: 0">
+                                <div class="col-sm-4">
+                                    <div class="feature feature--featured feature-1 boxed boxed--border bg--white">
+                                        <div class="color-palette" id="white"></div>
+                                        <h5>White</h5>
+                                    </div>
+                                    <!--end feature-->
+                                </div>
+                                <div class="col-sm-4">
+                                    <div class="feature feature--featured feature-1 boxed boxed--border bg--white">
+                                        <div class="color-palette" id="grey"></div>
+                                        <h5>Grey</h5>
+                                    </div>
+                                    <!--end feature-->
+                                </div>
+                                <div class="col-sm-4">
+                                    <div class="feature feature--featured feature-1 boxed boxed--border bg--white">
+                                        <div class="color-palette" id="black"></div>
+                                        <h5>Black</h5>
+                                    </div>
+                                    <!--end feature-->
+                                </div>
+                                <div class="col-sm-4">
+                                    <div class="feature feature--featured feature-1 boxed boxed--border bg--white">
+                                        <div class="color-palette" id="nude"></div>
+                                        <h5>Nude</h5>
+                                    </div>
+                                    <!--end feature-->
+                                </div>
+                                <div class="col-sm-4">
+                                    <div class="feature feature--featured feature-1 boxed boxed--border bg--white">
+                                        <div class="color-palette" id="red"></div>
+                                        <h5>Red</h5>
+                                    </div>
+                                    <!--end feature-->
+                                </div>
+                                <div class="col-sm-4">
+                                    <div class="feature feature--featured feature-1 boxed boxed--border bg--white">
+                                        <div class="color-palette" id="yellow"></div>
+                                        <h5>Yellow</h5>
+                                    </div>
+                                </div>    <!--end feature-->
+                                <div class="col-sm-4">
+                                    <div class="feature feature--featured feature-1 boxed boxed--border bg--white">
+                                        <div class="color-palette" id="lavender"></div>
+                                        <h5>Lavender</h5>
+                                    </div>
+                                </div>    <!--end feature-->
+                                <div class="col-sm-4">
+                                    <div class="feature feature--featured feature-1 boxed boxed--border bg--white">
+                                        <div class="color-palette" id="pink"></div>
+                                        <h5>Pink</h5>
+                                    </div>
+                                    <!--end feature-->
+                                </div>
+                            </div>
+                            <div class="row" id="living-room" >
+
+                                <div class="col-sm-6 result-images-container">
+                                    <div class="feature feature--featured feature-1 boxed boxed--border bg--white">
+                                        <div class="result-images" id="livingroom-black">
+                                        </div>
+                                    </div>
+                                    <!--end feature-->
+                                </div>
+                                <div class="col-sm-6 result-images-container">
+                                    <div class="feature feature--featured feature-1 boxed boxed--border bg--white">
+                                        <div class="result-images" id="livingroom-pink-red">
+                                        </div>
+                                    </div>
+                                    <!--end feature-->
+                                </div>
+                                <div class="col-sm-6 result-images-container">
+                                    <div class="feature feature--featured feature-1 boxed boxed--border bg--white">
+                                        <div class="result-images" id="livingroom-nude">
+                                        </div>
+                                    </div>
+                                    <!--end feature-->
+                                </div>
+                            </div>
+                            <div class="row" id="bedroom">
+                                <div class="col-sm-6 result-images-container">
+                                    <div class="feature feature--featured feature-1 boxed boxed--border bg--white">
+                                        <div class="result-images" id="bedroom-nude-white">
+                                            <!--<img src="img/livingroom15.jpg">-->
+                                        </div>
+                                    </div>
+                                    <!--end feature-->
+                                </div>
+                                <div class="col-sm-6 result-images-container">
+                                    <div class="feature feature--featured feature-1 boxed boxed--border bg--white">
+                                        <div class="result-images" id="bedroom-red-only">
+                                            <!--<img src="img/livingroom18.jpg">-->
+                                        </div>
+                                    </div>
+                                    <!--end feature-->
+                                </div>
+                                <div class="col-sm-6 result-images-container">
+                                    <div class="feature feature--featured feature-1 boxed boxed--border bg--white">
+                                        <div class="result-images" id="bedroom-lavender-only">
+                                            <!--<img src="img/livingroom19.jpg">-->
+                                        </div>
+                                    </div>
+                                    <!--end feature-->
+                                </div>
+                            </div>
+                            <div class="row" id="bathroom">
+                                <div class="col-sm-6 result-images-container" >
+                                    <div class="feature feature--featured feature-1 boxed boxed--border bg--white">
+                                        <div class="result-images" id="bathroom-nude-only">
+                                            <!--<img src="img/livingroom15.jpg">-->
+                                        </div>
+                                    </div>
+                                    <!--end feature-->
+                                </div>
+                                <div class="col-sm-6 result-images-container">
+                                    <div class="feature feature--featured feature-1 boxed boxed--border bg--white">
+                                        <div class="result-images" id="bathroom-black-pink-white">
+                                            <!--<img src="img/livingroom18.jpg">-->
+                                        </div>
+                                    </div>
+                                    <!--end feature-->
+                                </div>
+                                <div class="col-sm-6 result-images-container">
+                                    <div class="feature feature--featured feature-1 boxed boxed--border bg--white">
+                                        <div class="result-images" id="bathroom-nude-white">
+                                            <!--<img src="img/livingroom19.jpg">-->
+                                        </div>
+                                    </div>
+                                    <!--end feature-->
+                                </div>
+                            </div>
+                            <div class="row" id="kitchen">
+                                <div class="col-sm-6 result-images-container" >
+                                    <div class="feature feature--featured feature-1 boxed boxed--border bg--white">
+                                        <div class="result-images" id="kitchen-red-white">
+                                            <!--<img src="img/livingroom15.jpg">-->
+                                        </div>
+                                    </div>
+                                    <!--end feature-->
+                                </div>
+                                <div class="col-sm-6 result-images-container">
+                                    <div class="feature feature--featured feature-1 boxed boxed--border bg--white">
+                                        <div class="result-images" id="kitchen-yellow">
+                                            <!--<img src="img/livingroom18.jpg">-->
+                                        </div>
+                                    </div>
+                                    <!--end feature-->
+                                </div>
+                                <div class="col-sm-6 result-images-container">
+                                    <div class="feature feature--featured feature-1 boxed boxed--border bg--white">
+                                        <div class="result-images" id="kitchen-nude">
+                                            <!--<img src="img/livingroom19.jpg">-->
+                                        </div>
+                                    </div>
+                                    <!--end feature-->
+                                </div>
+                            </div>
+                            <div class="row" id="office">
+                                <div class="col-sm-6 result-images-container" >
+                                    <div class="feature feature--featured feature-1 boxed boxed--border bg--white">
+                                        <div class="result-images" id="office-grey-white">
+                                            <!--<img src="img/livingroom15.jpg">-->
+                                        </div>
+                                    </div>
+                                    <!--end feature-->
+                                </div>
+                                <div class="col-sm-6 result-images-container">
+                                    <div class="feature feature--featured feature-1 boxed boxed--border bg--white">
+                                        <div class="result-images" id="office-red-pink">
+                                            <!--<img src="img/livingroom18.jpg">-->
+                                        </div>
+                                    </div>
+                                    <!--end feature-->
+                                </div>
+                                <div class="col-sm-6 result-images-container">
+                                    <div class="feature feature--featured feature-1 boxed boxed--border bg--white">
+                                        <div class="result-images" id="office-yellow-white">
+                                            <!--<img src="img/livingroom19.jpg">-->
+                                        </div>
+                                    </div>
+                                    <!--end feature-->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <footer class="space--sm footer-2 bg--secondary">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6 col-md-4 col-xs-6">
+                    <h6 class="type--uppercase">HEAD QUARTERS</h6>
+                    <ul class="list--hover">
+                        <p>Plot 34, Mobolaji Johnson Avenue, Oregun Industrial Estate, Alausa Ikeja, Lagos. </p>
+                    </ul>
+                </div>
+                <div class="col-sm-6 col-md-4 col-xs-6">
+                    <h6 class="type--uppercase">CONTACT</h6>
+                    <ul class="list--hover">
+                        <p>Tel:08123438237 <br> E-mail: info@meyerpaints.com</p>
+                    </ul>
+                </div>
+                <div class="col-sm-6 col-md-4 col-xs-6">
+                    <h6 class="type--uppercase">QUICK NOTE</h6>
+                    <p>
+                        This website presents you with vital information on our products and professional painting ideas that give you "nothing but a perfect finish"
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6"> <span class="type--fine-print">© Meyer PLC 2018.</span> </div>
+                <div class="col-sm-6 text-right text-left-xs">
+                    <ul class="social-list list-inline list--hover">
+                        <li><a href="#banner-slider"><i class="socicon socicon-twitter icon icon--xs"></i></a></li>
+                        <li><a href="#banner-slider"><i class="socicon socicon-facebook icon icon--xs"></i></a></li>
+                        <li><a href="#banner-slider"><i class="socicon socicon-instagram icon icon--xs"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+</div>
+<script src="js/jquery-3.1.1.min.js"></script>
+<script src="js/parallax.js"></script>
+<script src="js/smooth-scroll.min.js"></script>
+<script src="js/scripts.js"></script>
+<script src="js/main-script.js"></script>
+</body>
+
+</html>
